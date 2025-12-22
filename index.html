@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+
+
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Game design
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <h1>
+            Game Designer
+        </h1>
+        <ul>
+            <li>
+                <a href="#aboutMe" class="current">
+                    About me
+                </a>
+            </li>
+            <li>
+                <a href="#games" class="current">
+                    Games
+                </a>
+            </li>
+            <li>
+                <a href="#tutorials" class="current">
+                    Tutorials
+                </a>
+            </li>
+        </ul>
+
+        <div class="flex-container">
+            <div class="flex-item">
+                <img src="portrait2.png" alt="A maze with an ocopus, a crab and a fish.">
+                <h2>
+                    About me
+                </h2>
+                <ul>
+                    <li>Code, art & music</li>
+                    <li>Retro style games</li>
+                    <li>Play and learn</li>
+                </ul>
+            </div>
+            <div class="flex-item">
+                <img src="octopus.png" alt="A maze with an ocopus, a crab and a fish.">
+                <h2>
+                    Games
+                </h2>
+                <ul>
+                    <li>Crabs'n'Sticks</li>
+                    <li>Samurai Palace</li>
+                    <li>Panic in the Pantanal</li>
+                </ul>
+            </div>
+            <div class="flex-item">
+                <img src="donovans_brain_1953.png" alt="A scene from Donovans Brain, 1953.">
+                <h2>
+                    Tutorials
+                </h2>
+                <ul>
+                    <li>Javascript and Phaser</li>
+                    <li>Web-GL</li>
+                    <li>AI for games</li>
+                </ul>
+            </div>  
+        </div>
+
+        <section id="aboutMe">
+            <h2>
+                About me
+            </h2>
+            <p>I always loved playing games (but not loosing). Making games has been an interst since the golden era of <a href="https://sv.wikipedia.org/wiki/Commodore_64">Commodore 64</a>.</p>
+            <p>I like all kind of games, but retro 2d games is what I have most experience in making, and they also relate the most to me. </p>
+            <p>My goal is to develop fun casual games which will teach the player about science, history or some other interesting topic.</p>
+        </section>
+        <section id="games">
+            <h2>
+                Games
+            </h2>
+            <table>
+                <tr>
+                    <td>
+                        <b>Crabs'n'Sticks</b>
+                    </td>
+                    <td>
+                        A maze game set on the beach. Play as an octopus catching crabs for dinner.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Samurai Palace</b>
+                    </td>
+                    <td>
+                        Kill the guards and the samurai. Based on a true story from feudal Japan.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Panic in the Pantanal</b>
+                    </td>
+                    <td>
+                        Fire is raging in the Pantanal. You are the only one who can save the animals.
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section id="tutorials">
+            <h2>
+                Tutorials
+            </h2>
+            <p>Phaser is a Javascript library focused on game creation. It has many powerful features such as groups, tweens and scenes.</p>
+            <p>Web-GL is perfect for rendering fast 2d and 3d games. However it involves low level shader coding.</p>
+            <p>Games may use advanced AI techniques, but even a few simple tricks could give an illusion of intelligence.</p>
+        </section>
+
+        <hr>
+
+        <h3>Contact Form</h3>
+
+        <form>       
+            <div class="container">
+                <form action="/action_page.php">
+                  <label for="fname">First Name</label>
+                  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              
+                  <label for="lname">Last Name</label>
+                  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+              
+                  <label for="country">Country</label>
+                  <select id="country" name="country">
+                    <option value="sweden">Sweden</option>
+                    <option value="norway">Norway</option>
+                    <option value="denmark">Denmark</option>
+                  </select>
+              
+                  <label for="subject">Subject</label>
+                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+              
+                  <input type="submit" value="Submit">
+                </form>
+              </div>
+        </form>
+
+        <footer>
+            <p>Author: Magnus Lindh</p>
+            <p>Copyright CC-BY</p>
+            <p><a href="mailto:gnumas@hotmail.com.com">gnumas@hotmail.com</a></p>
+          </footer> 
+    </body>
+</html>

@@ -1,0 +1,126 @@
+body
+{
+    background-color: lightgray;
+}
+
+h1 {
+    color: plum;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 80px;
+}
+
+h1:hover
+{
+    color: violet;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+input:focus {
+    background-color: yellow;
+}
+
+
+caption 
+{ 
+    background: lightblue;
+}
+
+ul
+{
+    list-style-type: none;
+    padding: 0px;
+    overflow: hidden;
+    background-color: lightblue;
+}
+
+li a
+{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    float: left;
+}
+
+li a.current
+{
+    background: lightskyblue;
+
+}
+
+li a:hover 
+{
+    background: cornflowerblue;
+    color: white;
+}
+
+footer {
+    background-color: Lightblue;
+    color: #ffffff;
+    text-align: center;
+}
+
+input[type=text], select, textarea {
+width: 100%;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+margin-top: 6px;
+margin-bottom: 16px;
+resize: vertical;
+}
+
+input[type=submit] {
+background-color: #04AA6D;
+color: white;
+padding: 12px 20px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+input[type=submit]:hover {
+background-color: #45a049;
+}
+
+.container {
+border-radius: 5px;
+background-color: darkgray;
+padding: 20px;
+}
+
+* {
+box-sizing: border-box;
+}
+
+.flex-container {
+display: flex;
+flex-direction: row;
+}
+
+.flex-item {
+background-color: lightblue;
+padding: 10px;
+font-size: 30px;
+text-align: center;
+width: 100%;
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media (max-width: 1200px) {
+    .flex-container {
+        flex-direction: column;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+table, th, td {
+    border: 3px solid violet;
+    border-collapse: collapse;
+}
