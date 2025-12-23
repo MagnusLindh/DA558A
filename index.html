@@ -9,6 +9,7 @@
             Game design
         </title>
         <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="contact.js"></script>
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0" />
@@ -123,26 +124,34 @@
 
         <h3>Contact Form</h3>
 
-        <form>       
+        <form id="myform">       
             <div class="container">
                 <form action="/action_page.php">
                   <label for="fname">First Name</label>
-                  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                  <input type="text" id="fname" name="fname" placeholder="Your name...">
               
                   <label for="lname">Last Name</label>
-                  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                  <input type="text" id="lname" name="lname" placeholder="Your last name...">
               
-                  <label for="country">Country</label>
-                  <select id="country" name="country">
-                    <option value="sweden">Sweden</option>
-                    <option value="norway">Norway</option>
-                    <option value="denmark">Denmark</option>
+                  <label for="mailadr">Email</label>
+                  <input type="email" id="email" name="email" placeholder="Your email...">
+
+                  <label for="phone">Phone</label>
+                  <input type="tel" id="mobile" name="mobile" placeholder="Your phone number...">
+
+                  <label for="subject">Subject</label>
+                  <select id="subject" name="subject">
+                    <option value="account">Account</option>
+                    <option value="invoice">Invoice</option>
+                    <option value="shipment">Shipment</option>
                   </select>
               
-                  <label for="subject">Subject</label>
-                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" placeholder="Write something, at least 20 characters..." style="height:200px"></textarea>
               
                   <input type="submit" value="Submit">
+
+                  <input type="submit" value="Clear">
                 </form>
               </div>
         </form>
