@@ -11,12 +11,6 @@ function startUp() {
     mobile=document.getElementById("myform").elements["mobile"];
     subject=document.getElementById("myform").elements["subject"];
     message=document.getElementById("myform").elements["message"];
-    console.log(fname);
-    console.log(lname);
-    console.log(email);
-    console.log(mobile);
-    console.log(subject);
-    console.log(message);
     // start event listeners
     fname.oninput = function() {
         let input = fname.value;
@@ -46,7 +40,7 @@ function startUp() {
         let input = message.value;
         document.getElementById("counter").innerHTML=input.length+"/20";
         if (!validateMessage(input)){
-            showError("messageErrorMessage","Use at least 20 letters.");
+            showError("messageErrorMessage","Use at least 20 characters.");
             document.getElementById("counter").style.color="red";
         } else {
             clearError("messageErrorMessage");
@@ -92,11 +86,39 @@ function clearError(element){
 }
 
 function clearForm(){
-    document.getElementById("fname").innerHTML="";
-    document.getElementById("lname").innerHTML="";
-    document.getElementById("email").innerHTML="";
-    document.getElementById("mobile").innerHTML="";
-    document.getElementById("message").innerHTML="";
+    fname.value="";
+    lname.value="";
+    email.value="";
+    mobile.value="";
+    message.value="";
+}
+
+function validateSubmission(event){
+    event.preventDefault(); // Avoid page reloading when submitting
+    let output="";
+    let errors=0;
+    if (!validateName(fname.value)){
+        output="Use only letters in first name. ";
+        errors++;
+    }
+    if (!validateName(lname.value)){
+        output=output + "Use only letters in last name. ";
+        errors++;
+    }
+    if (!validateEmail(email.value)){
+        output=output + "Use @ and a valid domain name in email adress.";
+        errors++;
+    }
+    if (!validateMessage(message.value)){
+        output=output + "Use at least 20 characters in message text.";
+        errors++;
+    }
+
+    showError("submitErrorMessage",output);
+
+    if (errors==0){
+        clearForm();
+    }
 }
 
 function checkArray(input,condition){
