@@ -62,14 +62,14 @@ footer {
 }
 
 input[type=text], select, textarea {
-width: 100%;
-padding: 12px;
-border: 1px solid #ccc;
-border-radius: 4px;
-box-sizing: border-box;
-margin-top: 6px;
-margin-bottom: 16px;
-resize: vertical;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
 }
 
 input[type=email], select, textarea {
@@ -109,7 +109,7 @@ background-color: #45a049;
 
 .container {
 border-radius: 5px;
-background-color: darkgray;
+background-color: royalblue;
 padding: 20px;
 }
 
@@ -145,4 +145,21 @@ img {
 table, th, td {
     border: 3px solid violet;
     border-collapse: collapse;
+}
+
+input {
+    border: 2px #ccc;
+    border-radius: 8px;
+}
+
+input:focus {
+    border: 2px blue;
+    border-radius: 8px;
+}
+
+.errorMessage {
+    color: #dc3545;
+    font-size: small;
+    opacity: 0%;
+    transition: opacity 1s;
 }
