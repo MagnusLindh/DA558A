@@ -129,18 +129,19 @@
                 <form action="/action_page.php">
                   <label for="fname">First Name</label>
                   <input type="text" id="fname" name="fname" placeholder="Your name...">
-                  <p id="fnameErrorMessage"></p>
+                  <p id="fnameErrorMessage" class="errorMessage">_</p>
               
                   <label for="lname">Last Name</label>
                   <input type="text" id="lname" name="lname" placeholder="Your last name...">
-                  <p id="lnameErrorMessage"></p>
+                  <p id="lnameErrorMessage" class="errorMessage">_</p>
               
                   <label for="email">Email</label>
                   <input type="email" id="email" name="email" placeholder="Your email...">
-                  <p id="emailErrorMessage"></p>
+                  <p id="emailErrorMessage" class="errorMessage">_</p>
 
                   <label for="mobile">Phone</label>
                   <input type="tel" id="mobile" name="mobile" placeholder="Your phone number...">
+                  <p id="mobileErrorMessage" class="errorMessage">_</p>
 
                   <label for="subject">Subject</label>
                   <select id="subject" name="subject">
@@ -151,14 +152,15 @@
               
                   <label for="message">Message</label>
                   <textarea id="message" name="message" placeholder="Write something, at least 20 characters..." style="height:200px"></textarea>
-                  <p id="counter"></p>
-                  <p id="messageErrorMessage"></p>
+                  <p id="counter" class=""counter">0/20</p>
+                  <p id="messageErrorMessage" class="errorMessage">_</p>
               
                   <input type="submit" value="Submit">
 
-                  <input type="submit" value="Clear">
+                  
+                  <input type="submit" onclick="clearForm()" value="Clear">
 
-                  <p id="submitErrorMessage"></p>
+                  <p id="submitMessage" class="errorMessage">_</p>
                 </form>
               </div>
         </form>
