@@ -1,6 +1,7 @@
 let hopp=document;
 console.log(hopp);
 
+// variables for form elements
 let fname,lname,email,mobile,subject,message;
 
 function startUp() {
@@ -11,7 +12,7 @@ function startUp() {
     mobile=document.getElementById("myform").elements["mobile"];
     subject=document.getElementById("myform").elements["subject"];
     message=document.getElementById("myform").elements["message"];
-    // start event listeners
+    // start first name event listener
     fname.oninput = function() {
         let input = fname.value;
         if (!validateName(input)){
@@ -19,9 +20,10 @@ function startUp() {
             fname.style.border = "solid red"; 
         } else {
             clearError("fnameErrorMessage");
-            fname.style.border = "solid green"; 
+            fname.style.border = "solid lightgreen"; 
         }
     };
+    // start last name event listener
     lname.oninput = function() {
         let input = lname.value;
         if (!validateName(input)){
@@ -29,9 +31,10 @@ function startUp() {
             lname.style.border = "solid red"; 
         } else {
             clearError("lnameErrorMessage");
-            lname.style.border = "solid green";
+            lname.style.border = "solid lightgreen";
         }
     };
+    // start email event listener
     email.oninput = function() {
         let input = email.value;
         if (!validateEmail(input)){
@@ -39,9 +42,10 @@ function startUp() {
             email.style.border = "solid red"; 
         } else {
             clearError("emailErrorMessage");
-            email.style.border = "solid green";
+            email.style.border = "solid lightgreen";
         }
     };
+    // start mobile event listener
     mobile.oninput = function() {
         let input = mobile.value;
         if (!validateMobile(input)){
@@ -49,20 +53,21 @@ function startUp() {
             email.style.border = "solid red"; 
         } else {
             clearError("mobileErrorMessage");
-            email.style.border = "solid green";
+            email.style.border = "solid lightgreen";
         }
     };
+    // start message event listener
     message.oninput = function() {
         let input = message.value;
-        document.getElementById("counter").innerHTML=input.length+"/20";
+        document.getElementById("counter").innerHTML=input.length+" / 20 characters";
         if (!validateMessage(input)){
             showError("messageErrorMessage","Use at least 20 characters.");
             document.getElementById("counter").style.color="red";
             message.style.border = "solid red"; 
         } else {
             clearError("messageErrorMessage");
-            document.getElementById("counter").style.color="green";
-            message.style.border = "solid green";
+            document.getElementById("counter").style.color="lightgreen";
+            message.style.border = "solid lightgreen";
         }
     }
 }
@@ -105,12 +110,18 @@ function clearForm(){
     email.value="";
     mobile.value="";
     message.value="";
+    clearError("fnameErrorMessage");
+    clearError("lnameErrorMessage");
+    clearError("emailErrorMessage");
+    clearError("mobileErrorMessage");
+    clearError("messageErrorMessage");
 }
 
 function validateSubmission(event){
     event.preventDefault(); // Avoid page reloading when submitting
     let output="";
     let errors=0;
+    // sum up all the errors in an output string
     if (!validateName(fname.value)){
         output="Use only letters in first name. ";
         errors++;
@@ -134,6 +145,7 @@ function validateSubmission(event){
 
     showError("submitMessage",output);
 
+    // submit if there are zero errors and show a message to the user
     if (errors==0){
         showError("submitMessage","Thank you " + fname.value + ", we will contact you as soon as possible.");
         clearForm();
