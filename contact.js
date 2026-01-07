@@ -151,7 +151,7 @@ function validateSubmission(event){
         clearForm();
         setTimeout(() => {
             showError("submitMessage","");
-          }, "3000");
+          }, "5000");
     }
 }
 
